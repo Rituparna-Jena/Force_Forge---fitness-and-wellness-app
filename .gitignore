@@ -1,0 +1,16 @@
+# Secrets and local config (never commit)
+.env
+.env.*
+!.env.example
+data/config.json
+
+# Local databases, generated stores, runtime logs
+/data/
+
+# Dependencies
+node_modules/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

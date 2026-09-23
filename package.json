@@ -1,0 +1,25 @@
+{
+  "name": "focusforge-v2",
+  "version": "2.0.0",
+  "description": "FocusForge v2 - an AI bouncer for the open tab. Chrome extension + local Express backend + analytics dashboard.",
+  "license": "MIT",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.js",
+    "smoke": "node scripts/smoke.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^11.10.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "FocusForge",
+  "version": "2.0.0",
+  "description": "An AI bouncer for the open tab. Judges the excuse before YouTube or Instagram opens.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://youtube.com/*",
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://instagram.com/*",
+    "https://www.instagram.com/*",
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://youtube.com/*",
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*",
+        "https://instagram.com/*",
+        "https://www.instagram.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ]
+}
